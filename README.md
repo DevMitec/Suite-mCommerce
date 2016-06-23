@@ -19,9 +19,10 @@ Los servicios POST que proporciona suite mCommerce son los siguientes:
 Servicio POST que registra el dispositivo desde el que se invoca la petición y desde el cual se solicita tokenizar una tarjeta; para consumir el servicio se envía una cadena cifrada en el parámetro POST “xml”, la cadena en claro es una cadena JSON con los siguientes atributos:
 
 <pre><code>
-_Propiedad        Descripción                                                   ¿Obligatorio?_
-* _urlREsponse_   URL donde enviará la respuesta                                Sí 
-* _tokenData_
+Propiedad         Descripción                                                   ¿Obligatorio?
+* **urlREsponse** URL donde enviará la respuesta                                Sí 
+
+* **tokenData**
 * branch          Sucursal para procesar token                                  Sí 
 * company         Empresa para procesar token                                   Sí 
 * country         País, debe contener el valor MEX                              Sí 
@@ -31,7 +32,7 @@ _Propiedad        Descripción                                                  
 * currency        Moneda de la transacción, debe contener el valor MXN          Sí 
 * operationType   Forma de operar                                               Sí 
 * reference       Referencia del cliente para identificar la petición de token  Sí 
-* _3dsData_
+* **3dsData**
 * branch          Sucursal para procesar petición 3DS                           No 
 * country         País, debe contener el valor MEX                              No 
 * user            Usuario centro de pagos para procesar 3DS                     No 
@@ -46,8 +47,7 @@ _* Si los valores opcionales se omiten tomará los del objeto “tokenData”_.
 
 Ejemplo:
 
-<pre><code>
-{
+<pre><code>{
   "urlResponse": "https://dev.mitec.com.mx/pgs/jsp/demoEcommRespuesta.jsp",
   "tokenData": {
   "branch": "004",
@@ -76,7 +76,7 @@ Ejemplo:
 La respuesta será enviada a la URL indicada en el atributo urlResponse, se enviará dentro de un parámetro denominado strResponse el cual contendrá una cadena JSON cifrada en AES, la estructura de la misma es la siguiente:
 
 <pre><code>
- Propiedad           Descripción                                    ¿Obligatorio?
+Propiedad           Descripción                                    ¿Obligatorio?
 cdResponse          Código de respuesta de la petición              Sí 
 nbResponse          Descripción de la respuesta                     Sí 
 token               Token generado para el dispositivo autenticados No
@@ -86,8 +86,7 @@ Donde cdRespone=”00” es Respuesta exitosa, cualquier otro valor es de error
 
 Ejemplo:
 
-<pre><code>
-{
+<pre><code>{
   "cdResponse": "00",
   "nbResponse": "success",
   "token": "8243078589705454"
@@ -106,10 +105,10 @@ Ejemplo:
 Servicio POST que permite invocar un cobro usando el token registrado previamente desde el dispositivo, para consumir este servicio se envía una cadena cifrada en el parámetro POST “xml”, la cadena en claro es una cadena JSON con los siguientes atributos:
 
 <pre><code>
-_Propiedad        Descripción                                                   ¿Obligatorio?_
-* _urlREsponse_   URL donde enviará la respuesta                                Sí 
+Propiedad        Descripción                                                   ¿Obligatorio?
+* **urlREsponse**   URL donde enviará la respuesta                                Sí 
 
-* _paymentData_
+* **paymentData**
 * branch          Sucursal para procesar pago con token                         Sí 
 * company         Empresa para procesar pago con token                          Sí 
 * country         País, debe contener el valor MEX                              Sí 
@@ -126,8 +125,7 @@ _Propiedad        Descripción                                                  
 
 Ejemplo:
 
-<pre><code>
-{
+<pre><code>{
   "urlResponse": "https://dev3.mitec.com.mx/pgs/jsp/demoEcommRespuesta.jsp",
   "paymentData": {
     "branch": "004",
@@ -148,7 +146,7 @@ Ejemplo:
 La respuesta será enviada a la URL indicada en el atributo urlResponse, se enviará dentro de un parámetro denominado strResponse el cual contendrá una cadena JSON cifrada en AES, la estructura de la misma es la siguiente:
 
 <pre><code>
-_Propiedad        Descripción                                                             ¿Obligatorio?_
+Propiedad        Descripción                                                             ¿Obligatorio?
 
 * cdResponse      Código de respuesta de la peticiónSucursal para procesar pago con token Sí 
 * nbResponse      Descripción de la respuesta                                             Sí 
@@ -173,8 +171,7 @@ _Propiedad        Descripción                                                  
 
 Ejemplo:
 
-<pre><code>
-{
+<pre><code>{
   "cdResponse": "00",
   "nbResponse": "success",
   "response": "approved",
