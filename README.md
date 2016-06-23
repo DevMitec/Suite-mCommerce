@@ -31,6 +31,7 @@ Servicio POST que registra el dispositivo desde el que se invoca la petición y 
 * currency        Moneda de la transacción, debe contener el valor MXN          Sí 
 * operationType   Forma de operar                                               Sí 
 * reference       Referencia del cliente para identificar la petición de token  Sí 
+
 * 3dsData
 * branch          Sucursal para procesar petición 3DS                           No 
 * country         País, debe contener el valor MEX                              No 
