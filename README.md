@@ -148,21 +148,21 @@ La respuesta será enviada a la URL indicada en el atributo urlResponse, se envi
 * cdResponse      Código de respuesta de la peticiónSucursal para procesar pago con token Sí 
 * nbResponse      Descripción de la respuesta                                             Sí 
 * response        Descripción de respuesta en cobro                                       Sí 
-* foliocpagos     Folio de pago (pgs)                                                     Sí 
-* auth            Número de autorización (pgs)                                            Sí
-* reference       Referencia (pgs)                                                        Sí 
-* time            Hora de la transacción (pgs)                                            Sí 
-* date            Fecha de la transacción (pgs)                                           Sí 
-* nb_company      Nombre de la empresa que realizó el cobro (pgs)                         Sí 
-* nb_merchant     Nombre de la afiliación (pgs)                                           Sí 
-* nb_street       Domicilio de la empresa (pgs)                                           Sí 
-* cc_type         Tipo de tarjeta (pgs)                                                   Sí 
-* tp_operation    Tipo de operación (pgs)                                                 Sí 
-* cc_name         Nombre (pgs)                                                            Sí 
-* cc_number       Últimos 4 dígitos de TDC (pgs)                                          Sí 
-* cc_expmonth     Mes de expiración (pgs)                                                 Sí 
-* cc_expyear      Año de expiración (pgs)                                                 Sí 
-* amount          Monto de la transacción (pgs)                                           Sí 
+* foliocpagos     Folio de pago (pgs)                                                     No 
+* auth            Número de autorización (pgs)                                            No
+* reference       Referencia (pgs)                                                        No 
+* time            Hora de la transacción (pgs)                                            No 
+* date            Fecha de la transacción (pgs)                                           No 
+* nb_company      Nombre de la empresa que realizó el cobro (pgs)                         No 
+* nb_merchant     Nombre de la afiliación (pgs)                                           No 
+* nb_street       Domicilio de la empresa (pgs)                                           No 
+* cc_type         Tipo de tarjeta (pgs)                                                   No 
+* tp_operation    Tipo de operación (pgs)                                                 No 
+* cc_name         Nombre (pgs)                                                            No 
+* cc_number       Últimos 4 dígitos de TDC (pgs)                                          No 
+* cc_expmonth     Mes de expiración (pgs)                                                 No 
+* cc_expyear      Año de expiración (pgs)                                                 No 
+* amount          Monto de la transacción (pgs)                                           No 
 
 </code></pre>
 
@@ -197,10 +197,6 @@ Url de petición:
 *Ambiente Calidad (test) https://qa3.mitec.com.mx/pgs/eCommPayService 
 
 *Ambiente Producción https://ssl.e-pago.com.mx/pgs/eCommPayService 
-
-
-
-
 
 
 
