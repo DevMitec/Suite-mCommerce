@@ -18,9 +18,8 @@ Los servicios POST que proporciona suite mCommerce son los siguientes:
 
 Servicio POST que registra el dispositivo desde el que se invoca la petición y desde el cual se solicita tokenizar una tarjeta; para consumir el servicio se envía una cadena cifrada en el parámetro POST “xml”, la cadena en claro es una cadena JSON con los siguientes atributos:
 
-<pre><code>
-Propiedad         Descripción                                                   ¿Obligatorio?
-* **urlREsponse** URL donde enviará la respuesta                                Sí 
+<pre><code>Propiedad         Descripción                                                   ¿Obligatorio?
+* urlREsponse     URL donde enviará la respuesta                                Sí 
 
 * tokenData
 * branch          Sucursal para procesar token                                  Sí 
@@ -198,6 +197,10 @@ Url de petición:
 *Ambiente Calidad (test) https://qa3.mitec.com.mx/pgs/eCommPayService 
 
 *Ambiente Producción https://ssl.e-pago.com.mx/pgs/eCommPayService 
+
+
+
+
 
 
 
