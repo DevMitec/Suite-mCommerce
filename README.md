@@ -22,7 +22,7 @@ Servicio POST que registra el dispositivo desde el que se invoca la petición y 
 Propiedad         Descripción                                                   ¿Obligatorio?
 * **urlREsponse** URL donde enviará la respuesta                                Sí 
 
-* **tokenData**
+* tokenData
 * branch          Sucursal para procesar token                                  Sí 
 * company         Empresa para procesar token                                   Sí 
 * country         País, debe contener el valor MEX                              Sí 
@@ -32,7 +32,7 @@ Propiedad         Descripción                                                  
 * currency        Moneda de la transacción, debe contener el valor MXN          Sí 
 * operationType   Forma de operar                                               Sí 
 * reference       Referencia del cliente para identificar la petición de token  Sí 
-* **3dsData**
+* 3dsData
 * branch          Sucursal para procesar petición 3DS                           No 
 * country         País, debe contener el valor MEX                              No 
 * user            Usuario centro de pagos para procesar 3DS                     No 
@@ -75,8 +75,7 @@ Ejemplo:
 
 La respuesta será enviada a la URL indicada en el atributo urlResponse, se enviará dentro de un parámetro denominado strResponse el cual contendrá una cadena JSON cifrada en AES, la estructura de la misma es la siguiente:
 
-<pre><code>
-Propiedad           Descripción                                    ¿Obligatorio?
+<pre><code>Propiedad           Descripción                                    ¿Obligatorio?
 cdResponse          Código de respuesta de la petición              Sí 
 nbResponse          Descripción de la respuesta                     Sí 
 token               Token generado para el dispositivo autenticados No
@@ -97,6 +96,7 @@ Ejemplo:
 **Url de petición:**
 
 *Ambiente Calidad (test)       https://qa3.mitec.com.mx/pgs/eCommAuthService
+
 *Ambiente Producción           https://ssl.e-pago.com.mx/pgs/eCommAuthService
 
 
@@ -104,11 +104,10 @@ Ejemplo:
 
 Servicio POST que permite invocar un cobro usando el token registrado previamente desde el dispositivo, para consumir este servicio se envía una cadena cifrada en el parámetro POST “xml”, la cadena en claro es una cadena JSON con los siguientes atributos:
 
-<pre><code>
-Propiedad        Descripción                                                   ¿Obligatorio?
-* **urlREsponse**   URL donde enviará la respuesta                                Sí 
+<pre><code>Propiedad        Descripción                                                   ¿Obligatorio?
+* urlREsponse     URL donde enviará la respuesta                                Sí 
 
-* **paymentData**
+* paymentData
 * branch          Sucursal para procesar pago con token                         Sí 
 * company         Empresa para procesar pago con token                          Sí 
 * country         País, debe contener el valor MEX                              Sí 
@@ -145,8 +144,7 @@ Ejemplo:
 
 La respuesta será enviada a la URL indicada en el atributo urlResponse, se enviará dentro de un parámetro denominado strResponse el cual contendrá una cadena JSON cifrada en AES, la estructura de la misma es la siguiente:
 
-<pre><code>
-Propiedad        Descripción                                                             ¿Obligatorio?
+<pre><code>Propiedad        Descripción                                                             ¿Obligatorio?
 
 * cdResponse      Código de respuesta de la peticiónSucursal para procesar pago con token Sí 
 * nbResponse      Descripción de la respuesta                                             Sí 
@@ -198,6 +196,7 @@ Nota: si durante este proceso se detectara que la autenticación de contexto no 
 Url de petición:
 
 *Ambiente Calidad (test) https://qa3.mitec.com.mx/pgs/eCommPayService 
+
 *Ambiente Producción https://ssl.e-pago.com.mx/pgs/eCommPayService 
 
 
