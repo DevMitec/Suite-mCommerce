@@ -199,7 +199,19 @@ Url de petición:
 
 *Ambiente Producción https://ssl.e-pago.com.mx/pgs/eCommPayService 
 
+## Estructura y Cifrado
 
+Se utiliza el algoritmo AES-128 en el cifrado de la cadena xml enviada a los servicios de cobro de Centro de Pagos, esta capa de seguridad es independiente de los modos “Crypto N” utilizados.
+
+La implementación se basa en el envío de una cadena xml a los servicios de cobro (Ej: /Autenticación, /Cobro con token, etc) con la siguiente estructura:
+
+<pre><code>
+    xml=<pgs>
+    <data0>CADENA_FIJA_ASIGNADA_ALCOMERCIO</data0>
+    <data>CADENA_DE_COBRO_CIFRADA_EN_AES_CODIFICADA_EN_BASE64</data>
+    </pgs>  
+
+</code></pre>
 
 
 ## Contacto Mesa de Ayuda MIT
