@@ -205,14 +205,19 @@ Se utiliza el algoritmo AES-128 en el cifrado de la cadena xml enviada a los ser
 
 La implementación se basa en el envío de una cadena xml a los servicios de cobro (Ej: /Autenticación, /Cobro con token, etc) con la siguiente estructura:
 
-<pre><code>
-    xml=&lt;pgs&gt;
+<pre><code>xml=&lt;pgs&gt;
     &lt;data0&gt;CADENA_FIJA_ASIGNADA_ALCOMERCIO&lt;/data0&gt;
     &lt;data&gt;CADENA_DE_COBRO_CIFRADA_EN_AES_CODIFICADA_EN_BASE64&lt;/data&gt;
     &lt;/pgs&gt;  
-
 </code></pre>
 
+La cadena se envía en el parámetro “xml” por POST a los servicios de cobro
+
+Ejemplo parámetro xml a enviar:
+
+<pre><code>
+  xml=&lt;pgs&gt; &lt;data0&gt;23546&lt;/data0&gt;&lt;data&gt;JddhvyXsOj… 4WXxFSbV3T6PbrXrMkI&lt;/data&gt;&lt;/pgs&gt; 
+</code></pre>
 
 ## Contacto Mesa de Ayuda MIT
 Para la atención de los requerimientos de soporte, contamos con mesa de ayuda con los siguientes números en ciudad de México para resolver dudas y orientación para explotar eficientemente los recursos de nuestra plataforma.
