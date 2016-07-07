@@ -215,8 +215,27 @@ La cadena se envía en el parámetro “xml” por POST a los servicios de cobro
 
 Ejemplo parámetro xml a enviar:
 
-<pre><code>
-  xml=&lt;pgs&gt; &lt;data0&gt;23546&lt;/data0&gt;&lt;data&gt;JddhvyXsOj… 4WXxFSbV3T6PbrXrMkI&lt;/data&gt;&lt;/pgs&gt; 
+<pre><code>xml=&lt;pgs&gt;&lt;data0&gt;23546&lt;/data0&gt;&lt;data&gt;JddhvyXsOj… 4WXxFSbV3T6PbrXrMkI&lt;/data&gt;&lt;/pgs&gt; 
+</code></pre>
+
+**Llave de Cifrado**
+La llave de cifrado tiene una longitud de 128 bits, la cual se le proporcionará al comercio en formato hexadecimal con longitud de 32 caracteres.
+
+Ej llave de cifrado:
+
+<pre><code>4BA0A9AF04CAC18CE315B016EA703496
+</code></pre>
+
+**Algoritmo de Cifrado**
+
+* **Tipo:** AES-128
+* **Modo de operación:** CBC
+* **Relleno (Pading):** PKCS5Padding
+* **Vector de inicialización:** Se envía en los primeros 16 bytes de la cadena cifrada
+
+Ej modo de cifrado:
+
+<pre><code>AES/CBC/PKCS5Padding
 </code></pre>
 
 ## Contacto Mesa de Ayuda MIT
