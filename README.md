@@ -206,10 +206,10 @@ Se utiliza el algoritmo AES-128 en el cifrado de la cadena xml enviada a los ser
 La implementación se basa en el envío de una cadena xml a los servicios de cobro (Ej: /Autenticación, /Cobro con token, etc) con la siguiente estructura:
 
 <pre><code>
-    xml=<pgs>
-    <data0>CADENA_FIJA_ASIGNADA_ALCOMERCIO</data0>
-    <data>CADENA_DE_COBRO_CIFRADA_EN_AES_CODIFICADA_EN_BASE64</data>
-    </pgs>  
+    xml=&lt;pgs&gt;
+    &lt;data0&gt;CADENA_FIJA_ASIGNADA_ALCOMERCIO&lt;/data0&gt;
+    &lt;data&gt;CADENA_DE_COBRO_CIFRADA_EN_AES_CODIFICADA_EN_BASE64&lt;/data&gt;
+    &lt;/pgs&gt;  
 
 </code></pre>
 
