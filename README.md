@@ -34,7 +34,7 @@ Ejemplo de modo de cifrado:`AES/CBC/PKCS5Padding`
 La implementación se basa en el envío de una cadena en el parámetro xml por `POST` a los servicios con la siguiente estructura:
 
 ```xml
-xml=<pgs><data0>CADENA FIJA ASIGNADA ALCOMERCIO>data0><data>CADENA DE COBRO CIFRADA EN AES CODIFICADA EN BASE64</data></pgs>
+xml=<pgs><data0>CADENA FIJA ASIGNADA ALCOMERCIO></data0><data>CADENA DE COBRO CIFRADA EN AES CODIFICADA EN BASE64</data></pgs>
 ```
 
 ## Autenticación
