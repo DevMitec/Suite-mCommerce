@@ -111,7 +111,10 @@ Ejemplo:
 {
   "cdResponse": "00",
   "nbResponse": "success",
-  "token": "8243078589705454"
+  "token": "1243078589705454",
+  "cc_type":"CREDITO",
+  "cc_brand":"MITCARD",
+  "cc_bank":"BANCO MIT"
 }
 ```
 
