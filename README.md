@@ -128,19 +128,19 @@ Ejemplo:
 
 ```json
 {
-  "urlResponse": "https://dev3.mitec.com.mx/pgs/jsp/demoEcommRespuesta.jsp",
+  "urlResponse": "https://www.miservidor.com.mx/procesaRespuesta.jsp",
   "paymentData": {
-    "branch": "004",
-    "company": "1015",
+    "branch": "001",
+    "company": "SNDBX",
     "country": "MEX",
-    "user": "1015JUAN0",
-    "password": "TEMPORAL1",
-    "merchant": "06330",
+    "user": "USUARIO",
+    "password": "SECRETO",
+    "merchant": "12345",
     "currency": "MXN",
     "operationType": "6",
-    "reference": "COBROTDC002",
-    "amount": "15.00",
-    "token": "3716355370080597"
+    "reference": "COBROCONTOKEN001",
+    "amount": "1500.00",
+    "token": "1243078589705454"
     }
 }
 ```
